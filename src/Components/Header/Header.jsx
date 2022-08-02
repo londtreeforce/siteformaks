@@ -1,22 +1,17 @@
 import React from 'react'
 import Logo from '../logo.svg'
+import { menu } from './menu.js'
 
-const menu = [
-    {
-        title: 'Products',
-        link: '/',
-    }
-]
-
+import styles from './Header.module.scss'
 
 const Header = () => {
   return (
-    <>
-    <div className='logo'>
-        <img src={Logo} alt="" />
+    <div className={styles.header}>
+    <div className={styles.logo}>
+        <img src={Logo} alt='' height='35' />
         
     </div>
-    <div className='menu-wrapper'>
+    <div className={styles.wrapper}>
         <ul>
             {menu.map((item, idx) => (
                 <li key={`menu item ${idx}`}>
@@ -27,7 +22,7 @@ const Header = () => {
         
     </div>
 
-    </>
+    </div>
   )
 }
 
